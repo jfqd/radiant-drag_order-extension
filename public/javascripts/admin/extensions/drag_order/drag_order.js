@@ -4,7 +4,7 @@ document.observe("dom:loaded", function() {
 })
 
 Event.addBehavior({
-  '.index#pages': SiteMapBehavior(),  
+  '.index#pages': SiteMapBehavior(),
   '.index': RuledTableBehavior(),
 });
 
@@ -21,7 +21,7 @@ var DragOrderIndex = Class.create({
         ghosting: false,
         constraint:  false,
         onDrag: function(drag, event) {
-          drag.element.addClassName('drag_move');          
+          drag.element.addClassName('drag_move');
         },
         onEnd: function(drag, event) {
           drag.element.removeClassName('drag_move');

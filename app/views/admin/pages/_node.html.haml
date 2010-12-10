@@ -7,7 +7,7 @@
             = icon
             = node_title
           - else
-            = expander + link_to("#{icon} #{node_title}", edit_admin_page_url(page), :title => page.url)
+            = expander + icon + link_to(node_title, edit_admin_page_url(page), :title => page.url)
             = page_type
       - node.status_column do
         - unless simple
@@ -21,5 +21,4 @@
   %ol.children{:id => "#{level == 0 ? 'parent_pages' : "page_#{page.id}_pages"}"}
     - page.children.each do |child|
       = render_node child, :level => level + 1, :simple => simple
-      
       

@@ -10,6 +10,11 @@ module DragOrder
               %{<img src="/images/admin/extensions/drag_order/handle.png" alt ="Drag this icon to move the page" />}
             end
             
+            def icon
+              icon_name = @current_node.virtual? ? 'virtual_page' : 'page'
+              image(icon_name, :class => "icon handle", :alt => '', :title => '')
+            end
+            
             def padding_left(level)
               (level * 23) + 31
             end
