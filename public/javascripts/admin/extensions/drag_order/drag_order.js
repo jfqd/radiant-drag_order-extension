@@ -79,14 +79,14 @@ var DragOrderIndex = Class.create({
     level += 1;    
     page.setAttribute('data-level', level);
     page.addClassName('level_' + level);
-    page.down('.attributes').setStyle({ paddingLeft: ((level * 23) + 31) + 'px' });
+    page.down('.attributes').setStyle({ paddingLeft: ((level * 23) + 9) + 'px' });
     
     page.select('.children').each(function(container) {
       level += 1;
       container.select('.page').each(function(page) {
         page.setAttribute('data-level', level);
         page.addClassName('level_' + level);
-        page.down('.attributes').setStyle({ paddingLeft: ((level * 23) + 31) + 'px' });
+        page.down('.attributes').setStyle({ paddingLeft: ((level * 23) + 9) + 'px' });
       });
     });
   },

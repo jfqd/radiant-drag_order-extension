@@ -15,10 +15,6 @@ module DragOrder
               image(icon_name, :class => "icon handle", :alt => '', :title => '')
             end
             
-            def padding_left(level)
-              (level * 23) + 11
-            end
-
             def expander
               image((expanded ? "collapse" : "expand"),
                     :class => "expander #{needs_expanding ? 'visible' : 'hidden'}", :alt => 'toggle children',
