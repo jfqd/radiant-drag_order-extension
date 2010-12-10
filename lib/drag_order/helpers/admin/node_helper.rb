@@ -16,7 +16,7 @@ module DragOrder
             end
             
             def padding_left(level)
-              (level * 23) + 31
+              (level * 23) + 11
             end
 
             def expander
